@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Main Body Styling */
+body {
+    height: 100vh;
+    background-image: url("../images/main-bg.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+/*Card : Sample text */
+#sample-text-card{
+    margin: 0px 100px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(223, 223, 247);
+}
+
+#sample-text-card h1{
+    font-size: 55px;
+}
+
+#sample-text-card p{
+    font-size: 14px;
+}
+
+.button-wrapper a{
+    padding: 10px;
+    width: 200px;
+    color:white;
+    box-shadow: 0px 3px 6px rgb(5, 5, 64);
+}
+
+.register{
+    margin-right: 7px;
+    background-color:#46c9d2;
+    border: 1px solid #10533c;
+}
+
+.login{
+    background-color:#ef7e32;
+    border: 1px solid #543800;
+}
+
+/* <!-- Card: Registration Form --> */
+
+.card .form-control{
+    margin: 10px 0px;
+    box-shadow: 0px 3px 6px rgb(5, 5, 64);
+}
+
+.card .card-title{
+    color: white;
+}
+
+.card button{
+    background-color:#46c9d2;
+    box-shadow: 0px 3px 6px rgb(5, 5, 64);
+    border: 1px solid #10533c;
+    color: white;
+    width: 200px;
+}
+
+.custom-margin {
+    margin-left: 8px; /* Adjust the value as needed */
+}
+
+/* Card: Error Card*/
+
+.card {
+    box-shadow: 0px 3px 6px rgb(5, 5, 64);
+}
+
+.card .card-text{
+    font-size: 20px;
+    text-align:justify;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
