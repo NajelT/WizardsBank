@@ -50,9 +50,9 @@ body{
 
 /* Transact Button */
 #transact-btn{
-    background-color:#ff6600;
+    background-color:#ffaa00;
     border: 1px solid #543800;
-    color: white;
+    color: black;
 }
 
 /* Add Account Button */
