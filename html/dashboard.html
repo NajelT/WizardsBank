@@ -12,7 +12,7 @@
 </head>
 <body>
     <!-- Main Page Header -->
-     <header class="main-page-header mb-3 bg-primary">
+     <header class="main-page-header mb-3 bg-primary header-gradient">
         <!-- Container -->
          <div class="container d-flex align-items-center">
             <!-- Company Name -->
@@ -38,7 +38,7 @@
 
             <!-- Log Out Button -->
              <a href="index.html" class="btn btn-sm text-white ms-5">
-                <i class="fa fa-sign-out-alt"></i> Sign Out
+                <i class="fa fa-sign-out-alt text-danger"></i> <span class="text-danger">Sign Out</span> 
              </a>
             <!-- End of Log Out Button -->
 
@@ -48,24 +48,225 @@
     <!-- End of Main Page Header -->
 
     <!-- Start of Transact Offcanvas body-->
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas offcanvas-start offcanvas-gradient" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Transact</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <!-- Offcanvas: Transact body -->
         <div class="offcanvas-body">
-            Transactions Form Container
+            <small class="card-text mb-1">
+                Choose an option below to perform a transaction
+            </small>
+            <!-- Transaction type Drop Down List -->
+             <select id="transact-type" class="form-control my-2" id="">
+                <option value="">-- Select Transaction Type --</option>
+                <option value="payment">Payment</option>
+                <option value="transfer">Transfer</option>
+                <option value="deposit">Deposit</option>
+                <option value="withdraw">Withdraw</option>
+             </select>
+            <!-- End of Transaction type Drop Down List -->
+
+            <!-- Card: Payment Card -->
+             <div class="card payment-card bg-transparent border-3 shadow ">
+                <!-- Card Body -->
+                 <div class="card-body">
+
+                    <!-- Form Group -->
+                    <div class="form-group mb-3">
+                        <label> Account Holder / Beneficiary </label>
+                        <input type="text" name="beneficiary" class="form-control" placeholder="Enter Account Beneficiary Name">
+                    </div>
+                    <!-- End of Form Group -->
+
+                     <!-- Form Group -->
+                    <div class="form-group mb-3">
+                        <label> Beneficiary Account Number </label>
+                        <input type="text" name="account_number" class="form-control" placeholder="Enter Beneficiary Account Number">
+                    </div>
+                    <!-- End of Form Group -->
+
+                    <!-- Form Group -->
+                    <div class="form-group mb-3">
+                        <label> Select Account</label>
+                        <!-- Select Account Option -->
+                        <select name="account_id" class="form-control" id="">
+                            <option value="">-- Select Account --</option>
+                        </select>
+                    <!-- End of Select Account Option -->
+                    </div>
+                    <!-- End of Form Group -->
+
+                    <!-- Form Group -->
+                    <div class="form-group mb-3">
+                        <label> Reference </label>
+                        <input type="text" name="reference" class="form-control" placeholder="Enter Reference">
+                    </div>
+                    <!-- End of Form Group -->
+
+                    <!-- Form Group -->
+                    <div class="form-group mb-3">
+                        <label> Enter Payment Amount </label>
+                        <input type="text" name="payment_amount" class="form-control" placeholder="Enter Payment Amount">
+                    </div>
+                    <!-- End of Form Group -->     
+                     
+                    <!-- Form Group -->
+                    <div class="form-group mb-3">
+                        <button id="" class="btn btn-md transact-btn">Pay</button>
+                    </div>
+                    <!-- End of Form Group -->   
+                    
+                 </div>
+                <!-- End of Card Body -->
+             </div>
+            <!-- End of Card: Payment Card -->
+
+
+
+            <!-- Card: transfer Card -->
+            <div class="card transfer-card bg-transparent border-3 shadow ">
+                <!-- Card Body -->
+                 <div class="card-body">
+
+                    <!-- Form Group -->
+                    <div class="form-group mb-3">
+                        <label> Select Account</label>
+                        <!-- Select Account Option -->
+                        <select name="account_id" class="form-control" id="">
+                            <option value="">-- Select Account From --</option>
+                        </select>
+                    <!-- End of Select Account Option -->
+                    </div>
+                    <!-- End of Form Group -->
+
+                    <!-- Form Group -->
+                    <div class="form-group mb-3">
+                        <label> Select Account</label>
+                        <!-- Select Account Option -->
+                        <select name="account_id" class="form-control" id="">
+                            <option value="">-- Select Account To--</option>
+                        </select>
+                    <!-- End of Select Account Option -->
+                    </div>
+                    <!-- End of Form Group -->
+
+                    <!-- Form Group -->
+                    <div class="form-group mb-3">
+                        <label> Enter transfer Amount </label>
+                        <input type="text" name="transfer_amount" class="form-control" placeholder="Enter transfer Amount">
+                    </div>
+                    <!-- End of Form Group -->     
+                     
+                    <!-- Form Group -->
+                    <div class="form-group mb-3">
+                        <button id="" class="btn btn-md transact-btn">Transfer</button>
+                    </div>
+                    <!-- End of Form Group -->   
+                    
+                 </div>
+                <!-- End of Card Body -->
+             </div>
+            <!-- End of Card: transfer Card -->
+
+
+            <!-- Card: Deposit Card -->
+            <div class="card deposit-card bg-transparent border-3 shadow ">
+
+                <!-- Card Body -->
+                 <div class="card-body">
+
+                    <!-- Deposit Form -->
+                    <form action="" class="deposit-form">
+                        <!-- Form Group -->
+                        <div class="form-group mb-3">
+                            <label> Deposit Amount </label>
+                            <input type="text" name="deposit_amount" class="form-control" placeholder="Enter Deposit Amount">
+                        </div>
+                        <!-- End of Form Group -->     
+
+                        <!-- Form Group -->
+                        <div class="form-group mb-3">
+                            <label> Select Account</label>
+                            <!-- Select Account Option -->
+                            <select name="account_id" class="form-control" id="">
+                                <option value="">-- Select Account --</option>
+                            </select>
+                        <!-- End of Select Account Option -->
+                        </div>
+                        <!-- End of Form Group -->   
+                        
+                        <!-- Form Group -->
+                        <div class="form-group my-3">
+                            <button id="" class="btn btn-md transact-btn">Deposit</button>
+                        </div>
+                        <!-- End of Form Group -->  
+                    </form>
+                    <!-- End of Deposit Form -->
+                 </div>
+                <!-- End of Card Body -->
+             </div>
+            <!-- End of Card: Deposit Card -->
+
+
+
+            <!-- Card: Withdraw Card -->
+            <div class="card withdraw-card bg-transparent border-3 shadow ">
+
+                <!-- Card Body -->
+                 <div class="card-body">
+
+                    <!-- Withdraw Form -->
+                    <form action="" class="withdraw-form">
+                        <!-- Form Group -->
+                        <div class="form-group mb-3">
+                            <label> Withdrawal Amount </label>
+                            <input type="text" name="withdraw_amount" class="form-control" placeholder="Enter Withdraw Amount">
+                        </div>
+                        <!-- End of Form Group -->     
+
+                        <!-- Form Group -->
+                        <div class="form-group mb-3">
+                            <label> Select Account</label>
+                            <!-- Select Account Option -->
+                            <select name="account_id" class="form-control" id="">
+                                <option value="">-- Select Account From --</option>
+                            </select>
+                        <!-- End of Select Account Option -->
+                        </div>
+                        <!-- End of Form Group -->   
+                        
+                        <!-- Form Group -->
+                        <div class="form-group my-3">
+                            <button id="" class="btn btn-md transact-btn">Withdraw</button>
+                        </div>
+                        <!-- End of Form Group -->  
+                    </form>
+                    <!-- End of Withdraw Form -->
+                 </div>
+                <!-- End of Card Body -->
+             </div>
+            <!-- End of Card: Withdraw Card -->
+
+            
+            
+
+
+
+            
+
+
         </div>
         <!-- End of Offcanvas: Transact body -->
     </div>
     <!-- End of Transact Offcanvas body -->
 
     <!-- Right Side Offcanvas body: Accounts Form Container -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas offcanvas-end offcanvas-gradient" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <!-- Offcanvas Right Button -->
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Accounts</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <!-- End of Offcanvas Right Button -->
@@ -98,7 +299,7 @@
 
     <!-- Container: Total Accounts Balance Desiplay -->
 
-    <div class="container d-flex py-3">
+    <div class="container d-flex">
         <h2 class="me-auto">Total Accounts Balance:</h2>
         <h2 class="ms-auto">0.00</h2>
     </div>
@@ -173,7 +374,7 @@
      </div>
     <!-- End of Container: No Accounts -->
 
-    
+    <script src="../js/main.js"></script>
 </body>
 
 </html>

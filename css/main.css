@@ -5,7 +5,7 @@
 
 /* Main Body Styling */
 body{
-    background-color: rgb(212, 240, 255);
+    background-color: rgb(189, 214, 228);
 }
 
 .container{
@@ -61,3 +61,45 @@ body{
     border: 1px solid #543800;
     color: white;
 }
+
+
+/* Header gradient */
+.header-gradient {
+    background: linear-gradient(30deg, #0d515d, #d9def7);
+}
+
+
+/* Offcanvas Background */
+.offcanvas-gradient {
+    background: linear-gradient(30deg, #0d515d, #d9def7);
+}
+
+.transact-btn{
+    background-color:#ff6600;
+    border: 1px solid #543800;
+    color: white;    
+}
+
+/* Card: Deposit Card */
+.payment-card{
+    display: none;
+}
+
+/* Card: Withdraw Card */
+.transfer-card{
+    display: none;
+}
+
+.payment-card, .transfer-card, .deposit-card, .withdraw-card {
+    display: none;
+}
+
+.payment-card.active, .transfer-card.active, .deposit-card.active, .withdraw-card.active {
+    display: block;
+}
+
+
+
+
+
+
