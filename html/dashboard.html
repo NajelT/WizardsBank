@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="../css/main.css">
     <script src="../js/bootstrap.bundle.js"></script>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');</style>
     <title>Dashboard</title>
 </head>
 <body>
@@ -248,15 +249,6 @@
                 <!-- End of Card Body -->
              </div>
             <!-- End of Card: Withdraw Card -->
-
-            
-            
-
-
-
-            
-
-
         </div>
         <!-- End of Offcanvas: Transact body -->
     </div>
@@ -266,14 +258,50 @@
     <div class="offcanvas offcanvas-end offcanvas-gradient" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <!-- Offcanvas Right Button -->
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasRightLabel">Accounts</h5>
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Create / Add an Account</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <!-- End of Offcanvas Right Button -->
 
         <!-- Offcanvas Body: Accounts Form Wrapper -->
          <div class="offcanvas-body">
-            Accounts Form Container
+            <!-- Card: Accounts Form Card -->
+            <div class="card bg-transparent shadow br-3">
+                <!-- Card Body -->
+                <div class="card-body">
+                    <form action="" class="add-account-form">
+
+                        <!-- Form Group -->
+                        <div class="form-group mb-3">
+                            <label for="">Account Name</label>
+                            <input type="text" name="account_name" class="form-control" placeholder="Enter Account Name..."> 
+                        </div>
+                        <!-- End of Form Group -->
+
+                         <!-- Form Group -->
+                        <div class="form-group mb-3">
+                            <label for=""> Account Type</label>
+                            <select name="account_type" class="form-control" id="">
+                                <option value="">-- Select Account Type --</option>
+                                <option value="check">Check</option>
+                                <option value="savings">Savings</option>
+                                <option value="business">Business</option>
+                            </select>
+                        </div>
+                        <!-- End of Form Group -->
+
+                        <!-- Form Group -->
+                        <div class="form-group my-3">
+                            <button id="" class="btn btn-md transact-btn">Add Account</button>
+                        </div>
+                        <!-- End of Form Group -->  
+
+                    </form>
+                    <!-- End of Card Body -->
+                </div>
+                <!-- End of Card Body -->
+            </div>
+            <!-- End of Card: Accounts Form Card -->
          </div>
         <!-- End of Offcanvas BOdy: Accounts Form Wrapper -->
 
